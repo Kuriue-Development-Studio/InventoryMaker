@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'taewookim'
-version = '1.0'
+version = '1.1'
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
@@ -15,6 +15,7 @@ jar {
     archiveFileName = "${project.name}-${version}.jar"
 }
 
+// "taewookim:Java_InventoryMaker:1.0"
 publishing {
     publications {
         mavenJava(MavenPublication) {

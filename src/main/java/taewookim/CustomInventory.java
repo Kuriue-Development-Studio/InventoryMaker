@@ -22,16 +22,16 @@ public abstract class CustomInventory {
         return y*9+x;
     }
 
-    abstract void onOpen(InventoryOpenEvent e);
+    public abstract void onOpen(InventoryOpenEvent e);
 
-    abstract void onClose(InventoryCloseEvent e);
+    public abstract void onClose(InventoryCloseEvent e);
 
-    abstract void onClickBotton(InventoryClickEvent e);
+    public abstract void onClickBotton(InventoryClickEvent e);
 
-    abstract void onClickOutside(InventoryClickEvent e);
+    public abstract void onClickOutside(InventoryClickEvent e);
 
-    abstract void onClick(InventoryClickEvent e);
+    public abstract void onClick(InventoryClickEvent e);
 
-    abstract void onDrag(InventoryDragEvent e);
+    public abstract void onDrag(InventoryDragEvent e);
 
 }
