@@ -7,7 +7,7 @@ import org.bukkit.inventory.Inventory;
 
 public abstract class CustomInventory {
 
-    private final Inventory inv;
+    protected final Inventory inv;
 
     public CustomInventory(int line, String title) {
         inv = Bukkit.createInventory(null, line*9, title);
@@ -18,20 +18,20 @@ public abstract class CustomInventory {
         p.openInventory(inv);
     }
 
-    private static int getSlot(int x, int y) {
+    protected static int getSlot(int x, int y) {
         return y*9+x;
     }
 
-    public abstract void onOpen(InventoryOpenEvent e);
+    protected abstract void onOpen(InventoryOpenEvent e);
 
-    public abstract void onClose(InventoryCloseEvent e);
+    protected abstract void onClose(InventoryCloseEvent e);
 
-    public abstract void onClickBotton(InventoryClickEvent e);
+    protected abstract void onClickBotton(InventoryClickEvent e);
 
-    public abstract void onClickOutside(InventoryClickEvent e);
+    protected abstract void onClickOutside(InventoryClickEvent e);
 
-    public abstract void onClick(InventoryClickEvent e);
+    protected abstract void onClick(InventoryClickEvent e);
 
-    public abstract void onDrag(InventoryDragEvent e);
+    protected abstract void onDrag(InventoryDragEvent e);
 
 }
