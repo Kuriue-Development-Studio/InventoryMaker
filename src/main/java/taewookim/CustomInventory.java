@@ -14,6 +14,7 @@ public abstract class CustomInventory {
     }
 
     public final void openPlayer(Player p) {
+        p.closeInventory();
         InventoryData.add(p, this);
         p.openInventory(inv);
     }
