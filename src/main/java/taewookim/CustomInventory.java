@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.*;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 public abstract class CustomInventory {
 
@@ -11,6 +12,14 @@ public abstract class CustomInventory {
 
     public CustomInventory(int line, String title) {
         inv = Bukkit.createInventory(null, line*9, title);
+    }
+
+    public final void setItem(int slot, ItemStack item) {
+        inv.setItem(slot, item);
+    }
+
+    public final ItemStack getItem(int slot) {
+        return inv.getItem(slot);
     }
 
     public final void openPlayer(Player p) {
